@@ -96,3 +96,22 @@ test("feature extraction ignores commented-out entries", () => {
   `);
   assert.deepEqual(features, [{ name: "real", version: 1 }]);
 });
+
+test("maskSource can preserve comments while still blanking string literals", () => {
+  const withoutComments = maskSource(SOURCE);
+  assert.doesNotMatch(withoutComments, /TODO: implement/);
+  assert.doesNotMatch(withoutComments, /unimplemented Method: stubby/);
+
+  const commentsOnly = maskSource(SOURCE, { keepComments: true });
+  assert.match(commentsOnly, /TODO: implement/);
+  assert.doesNotMatch(commentsOnly, /unimplemented Method: stubby/, "string contents stay masked");
+
+  const everything = maskSource(SOURCE, { keepStrings: true, keepComments: true });
+  assert.match(everything, /unimplemented Method: stubby/);
+});
+
+test("method bodies keep comments so TODO markers remain detectable", () => {
+  const todo = findMethods(SOURCE).find((method) => method.name === "todo");
+  assert.match(todo.body, /TODO: implement/);
+  assert.equal(classifyBody(todo.body), "stubbed");
+});

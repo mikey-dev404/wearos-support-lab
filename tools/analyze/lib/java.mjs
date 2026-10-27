@@ -13,15 +13,12 @@ export function maskSource(source, { keepStrings = false, keepComments = false }
   let index = 0;
   while (index < source.length) {
     const two = source.slice(index, index + 2);
-    if (keepComments) {
-      out += source[index];
-      index += 1;
-    } else if (two === "//") {
+    if (!keepComments && two === "//") {
       const end = source.indexOf("\n", index);
       const stop = end === -1 ? source.length : end;
       out += " ".repeat(stop - index);
       index = stop;
-    } else if (two === "/*") {
+    } else if (!keepComments && two === "/*") {
       const end = source.indexOf("*/", index + 2);
       const stop = end === -1 ? source.length : end + 2;
       out += source.slice(index, stop).replace(/[^\n]/g, " ");

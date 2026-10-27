@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Tests (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Parser and renderer tests
+        run: npm test
+
+  report:
+    name: Regenerate gap report from GmsCore
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sparse clone the wear module
+        run: |
+          git clone --filter=blob:none --sparse --depth 1 https://github.com/microg/GmsCore.git /tmp/GmsCore
+          git -C /tmp/GmsCore sparse-checkout set play-services-wearable
+      - name: Scan
+        run: node tools/analyze/index.mjs --repo /tmp/GmsCore --out reports-live
+      - name: Show headline
+        run: sed -n '1,30p' reports-live/gap-report.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gap-report
+          path: reports-live/
+          retention-days: 30

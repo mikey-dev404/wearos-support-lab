@@ -1,0 +1,21 @@
+{
+  "name": "wearos-support-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Field notes and a gap analyzer for microG Wear OS support (microg/GmsCore#2843)",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "analyze": "node tools/analyze/index.mjs",
+    "test": "node --test tools/analyze/test/*.test.mjs",
+    "test:watch": "node --test --watch tools/analyze/test/*.test.mjs"
+  },
+  "files": [
+    "tools",
+    "reports",
+    "docs"
+  ]
+}

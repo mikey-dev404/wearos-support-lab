@@ -1,0 +1,858 @@
+{
+  "generatedAt": "2026-10-27T14:58:10.137Z",
+  "repo": "gmscore",
+  "commit": "342c28011b46a164b969f62acaaa32941927c4b4",
+  "module": "play-services-wearable",
+  "moduleStats": {
+    "javaFiles": 80,
+    "aidlFiles": 38,
+    "javaLines": 7843,
+    "publicApiClasses": 60,
+    "publicApiClassNames": [
+      "AddListenerRequest",
+      "AddLocalCapabilityResponse",
+      "AmsEntityUpdate",
+      "AmsEntityUpdateParcelable",
+      "AncsNotification",
+      "AncsNotificationParcelable",
+      "Asset",
+      "CapabilityApi",
+      "CapabilityInfo",
+      "CapabilityInfoParcelable",
+      "Channel",
+      "ChannelApi",
+      "ChannelEventParcelable",
+      "ChannelIOException",
+      "ChannelParcelable",
+      "ChannelReceiveFileResponse",
+      "ChannelSendFileResponse",
+      "CloseChannelResponse",
+      "ConnectionConfiguration",
+      "DataApi",
+      "DataEvent",
+      "DataEventBuffer",
+      "DataItem",
+      "DataItemAsset",
+      "DataItemAssetParcelable",
+      "DataItemBuffer",
+      "DataItemParcelable",
+      "DataMap",
+      "DataMapItem",
+      "DeleteDataItemsResponse",
+      "GetAllCapabilitiesResponse",
+      "GetCapabilityResponse",
+      "GetChannelInputStreamResponse",
+      "GetChannelOutputStreamResponse",
+      "GetCloudSyncOptInOutDoneResponse",
+      "GetCloudSyncOptInStatusResponse",
+      "GetCloudSyncSettingResponse",
+      "GetConfigResponse",
+      "GetConfigsResponse",
+      "GetConnectedNodesResponse",
+      "GetDataItemResponse",
+      "GetFdForAssetResponse",
+      "GetLocalNodeResponse",
+      "MessageApi",
+      "MessageEvent",
+      "MessageEventParcelable",
+      "Node",
+      "NodeApi",
+      "NodeParcelable",
+      "OpenChannelResponse",
+      "PutDataMapRequest",
+      "PutDataRequest",
+      "PutDataResponse",
+      "RemoveListenerRequest",
+      "RemoveLocalCapabilityResponse",
+      "SendMessageResponse",
+      "StorageInfoResponse",
+      "Wearable",
+      "WearableListenerService",
+      "WearableStatusCodes"
+    ]
+  },
+  "serviceInterface": {
+    "file": "play-services-wearable/src/main/aidl/com/google/android/gms/wearable/internal/IWearableService.aidl",
+    "methodCount": 48,
+    "duplicateTransactionIds": []
+  },
+  "summary": {
+    "total": 48,
+    "implemented": 23,
+    "partial": 3,
+    "stubbed": 22,
+    "missing": 0,
+    "logMarked": 25,
+    "stubRatio": 0.5208333333333334
+  },
+  "groups": [
+    {
+      "group": "Configs",
+      "total": 5,
+      "implemented": 5,
+      "partial": 0,
+      "stubbed": 0,
+      "missing": 0
+    },
+    {
+      "group": "DataItems",
+      "total": 7,
+      "implemented": 7,
+      "partial": 0,
+      "stubbed": 0,
+      "missing": 0
+    },
+    {
+      "group": "Other",
+      "total": 13,
+      "implemented": 6,
+      "partial": 0,
+      "stubbed": 7,
+      "missing": 0
+    },
+    {
+      "group": "Capabilties",
+      "total": 4,
+      "implemented": 0,
+      "partial": 3,
+      "stubbed": 1,
+      "missing": 0
+    },
+    {
+      "group": "Apple Notification Center Service",
+      "total": 3,
+      "implemented": 0,
+      "partial": 0,
+      "stubbed": 3,
+      "missing": 0
+    },
+    {
+      "group": "Channels",
+      "total": 7,
+      "implemented": 0,
+      "partial": 0,
+      "stubbed": 7,
+      "missing": 0
+    },
+    {
+      "group": "Cloud Sync",
+      "total": 5,
+      "implemented": 2,
+      "partial": 0,
+      "stubbed": 3,
+      "missing": 0
+    },
+    {
+      "group": "deprecated Connection",
+      "total": 4,
+      "implemented": 3,
+      "partial": 0,
+      "stubbed": 1,
+      "missing": 0
+    }
+  ],
+  "matrix": [
+    {
+      "name": "putConfig",
+      "transactionId": 19,
+      "group": "Configs",
+      "signature": "putConfig(IWearableCallbacks callbacks, in ConnectionConfiguration config)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 78
+    },
+    {
+      "name": "deleteConfig",
+      "transactionId": 20,
+      "group": "Configs",
+      "signature": "deleteConfig(IWearableCallbacks callbacks, String name)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 86
+    },
+    {
+      "name": "getConfigs",
+      "transactionId": 21,
+      "group": "Configs",
+      "signature": "getConfigs(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 94
+    },
+    {
+      "name": "enableConfig",
+      "transactionId": 22,
+      "group": "Configs",
+      "signature": "enableConfig(IWearableCallbacks callbacks, String name)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 107
+    },
+    {
+      "name": "disableConfig",
+      "transactionId": 23,
+      "group": "Configs",
+      "signature": "disableConfig(IWearableCallbacks callbacks, String name)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 116
+    },
+    {
+      "name": "putData",
+      "transactionId": 5,
+      "group": "DataItems",
+      "signature": "putData(IWearableCallbacks callbacks, in PutDataRequest request)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 129
+    },
+    {
+      "name": "getDataItem",
+      "transactionId": 6,
+      "group": "DataItems",
+      "signature": "getDataItem(IWearableCallbacks callbacks, in Uri uri)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 141
+    },
+    {
+      "name": "getDataItems",
+      "transactionId": 7,
+      "group": "DataItems",
+      "signature": "getDataItems(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 154
+    },
+    {
+      "name": "getDataItemsByUri",
+      "transactionId": 8,
+      "group": "DataItems",
+      "signature": "getDataItemsByUri(IWearableCallbacks callbacks, in Uri uri)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 162
+    },
+    {
+      "name": "getDataItemsByUriWithFilter",
+      "transactionId": 39,
+      "group": "DataItems",
+      "signature": "getDataItemsByUriWithFilter(IWearableCallbacks callbacks, in Uri uri, int typeFilter)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 167
+    },
+    {
+      "name": "deleteDataItems",
+      "transactionId": 10,
+      "group": "DataItems",
+      "signature": "deleteDataItems(IWearableCallbacks callbacks, in Uri uri)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 175
+    },
+    {
+      "name": "deleteDataItemsWithFilter",
+      "transactionId": 40,
+      "group": "DataItems",
+      "signature": "deleteDataItemsWithFilter(IWearableCallbacks callbacks, in Uri uri, int typeFilter)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 180
+    },
+    {
+      "name": "sendMessage",
+      "transactionId": 11,
+      "group": "Other",
+      "signature": "sendMessage(IWearableCallbacks callbacks, String targetNodeId, String path, in byte[] data)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 191
+    },
+    {
+      "name": "getFdForAsset",
+      "transactionId": 12,
+      "group": "Other",
+      "signature": "getFdForAsset(IWearableCallbacks callbacks, in Asset asset)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 217
+    },
+    {
+      "name": "getLocalNode",
+      "transactionId": 13,
+      "group": "Other",
+      "signature": "getLocalNode(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 261
+    },
+    {
+      "name": "getConnectedNodes",
+      "transactionId": 14,
+      "group": "Other",
+      "signature": "getConnectedNodes(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 272
+    },
+    {
+      "name": "getConnectedCapability",
+      "transactionId": 41,
+      "group": "Capabilties",
+      "signature": "getConnectedCapability(IWearableCallbacks callbacks, String capability, int nodeFilter)",
+      "status": "partial",
+      "evidence": null,
+      "implLine": 283
+    },
+    {
+      "name": "getAllCapabilities",
+      "transactionId": 42,
+      "group": "Capabilties",
+      "signature": "getAllCapabilities(IWearableCallbacks callbacks, int nodeFilter)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: getConnectedCapaibilties: \" + nodeFilter); callbacks.onGetAllCapabilit",
+      "implLine": 296
+    },
+    {
+      "name": "addLocalCapability",
+      "transactionId": 45,
+      "group": "Capabilties",
+      "signature": "addLocalCapability(IWearableCallbacks callbacks, String capability)",
+      "status": "partial",
+      "evidence": null,
+      "implLine": 302
+    },
+    {
+      "name": "removeLocalCapability",
+      "transactionId": 46,
+      "group": "Capabilties",
+      "signature": "removeLocalCapability(IWearableCallbacks callbacks, String capability)",
+      "status": "partial",
+      "evidence": null,
+      "implLine": 313
+    },
+    {
+      "name": "addListener",
+      "transactionId": 15,
+      "group": "Other",
+      "signature": "addListener(IWearableCallbacks callbacks, in AddListenerRequest request)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 324
+    },
+    {
+      "name": "removeListener",
+      "transactionId": 16,
+      "group": "Other",
+      "signature": "removeListener(IWearableCallbacks callbacks, in RemoveListenerRequest request)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 332
+    },
+    {
+      "name": "getStorageInformation",
+      "transactionId": 17,
+      "group": "Other",
+      "signature": "getStorageInformation(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: getStorageInformation\");",
+      "implLine": 338
+    },
+    {
+      "name": "clearStorage",
+      "transactionId": 18,
+      "group": "Other",
+      "signature": "clearStorage(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: clearStorage\");",
+      "implLine": 343
+    },
+    {
+      "name": "endCall",
+      "transactionId": 24,
+      "group": "Other",
+      "signature": "endCall(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: endCall\");",
+      "implLine": 348
+    },
+    {
+      "name": "acceptRingingCall",
+      "transactionId": 25,
+      "group": "Other",
+      "signature": "acceptRingingCall(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: acceptRingingCall\");",
+      "implLine": 353
+    },
+    {
+      "name": "silenceRinger",
+      "transactionId": 29,
+      "group": "Other",
+      "signature": "silenceRinger(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: silenceRinger\");",
+      "implLine": 358
+    },
+    {
+      "name": "injectAncsNotificationForTesting",
+      "transactionId": 26,
+      "group": "Apple Notification Center Service",
+      "signature": "injectAncsNotificationForTesting(IWearableCallbacks callbacks, in AncsNotificationParcelable notification)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: injectAncsNotificationForTesting: \" + notification);",
+      "implLine": 367
+    },
+    {
+      "name": "doAncsPositiveAction",
+      "transactionId": 27,
+      "group": "Apple Notification Center Service",
+      "signature": "doAncsPositiveAction(IWearableCallbacks callbacks, int i)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: doAncsPositiveAction: \" + i);",
+      "implLine": 372
+    },
+    {
+      "name": "doAncsNegativeAction",
+      "transactionId": 28,
+      "group": "Apple Notification Center Service",
+      "signature": "doAncsNegativeAction(IWearableCallbacks callbacks, int i)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: doAncsNegativeAction: \" + i);",
+      "implLine": 377
+    },
+    {
+      "name": "openChannel",
+      "transactionId": 30,
+      "group": "Channels",
+      "signature": "openChannel(IWearableCallbacks callbacks, String s1, String s2)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: openChannel; \" + s1 + \", \" + s2);",
+      "implLine": 382
+    },
+    {
+      "name": "closeChannel",
+      "transactionId": 31,
+      "group": "Channels",
+      "signature": "closeChannel(IWearableCallbacks callbacks, String s)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: closeChannel: \" + s);",
+      "implLine": 391
+    },
+    {
+      "name": "closeChannelWithError",
+      "transactionId": 32,
+      "group": "Channels",
+      "signature": "closeChannelWithError(IWearableCallbacks callbacks, String s, int errorCode)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: closeChannelWithError:\" + s + \", \" + errorCode);",
+      "implLine": 396
+    },
+    {
+      "name": "getChannelInputStream",
+      "transactionId": 33,
+      "group": "Channels",
+      "signature": "getChannelInputStream(IWearableCallbacks callbacks, IChannelStreamCallbacks channelCallbacks, String s)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: getChannelInputStream: \" + s);",
+      "implLine": 402
+    },
+    {
+      "name": "getChannelOutputStream",
+      "transactionId": 34,
+      "group": "Channels",
+      "signature": "getChannelOutputStream(IWearableCallbacks callbacks, IChannelStreamCallbacks channelCallbacks, String s)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: getChannelOutputStream: \" + s);",
+      "implLine": 407
+    },
+    {
+      "name": "writeChannelInputToFd",
+      "transactionId": 37,
+      "group": "Channels",
+      "signature": "writeChannelInputToFd(IWearableCallbacks callbacks, String s, in ParcelFileDescriptor fd)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: writeChannelInputToFd: \" + s);",
+      "implLine": 412
+    },
+    {
+      "name": "readChannelOutputFromFd",
+      "transactionId": 38,
+      "group": "Channels",
+      "signature": "readChannelOutputFromFd(IWearableCallbacks callbacks, String s, in ParcelFileDescriptor fd, long l1, long l2)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: readChannelOutputFromFd: \" + s + \", \" + l1 + \", \" + l2);",
+      "implLine": 417
+    },
+    {
+      "name": "syncWifiCredentials",
+      "transactionId": 36,
+      "group": "Other",
+      "signature": "syncWifiCredentials(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: syncWifiCredentials\");",
+      "implLine": 422
+    },
+    {
+      "name": "optInCloudSync",
+      "transactionId": 47,
+      "group": "Cloud Sync",
+      "signature": "optInCloudSync(IWearableCallbacks callbacks, boolean enable)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 230
+    },
+    {
+      "name": "getCloudSyncOptInDone",
+      "transactionId": 48,
+      "group": "Cloud Sync",
+      "signature": "getCloudSyncOptInDone(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: getCloudSyncOptInDone\");",
+      "implLine": 236
+    },
+    {
+      "name": "setCloudSyncSetting",
+      "transactionId": 49,
+      "group": "Cloud Sync",
+      "signature": "setCloudSyncSetting(IWearableCallbacks callbacks, boolean enable)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: setCloudSyncSetting\");",
+      "implLine": 241
+    },
+    {
+      "name": "getCloudSyncSetting",
+      "transactionId": 50,
+      "group": "Cloud Sync",
+      "signature": "getCloudSyncSetting(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 246
+    },
+    {
+      "name": "getCloudSyncOptInStatus",
+      "transactionId": 51,
+      "group": "Cloud Sync",
+      "signature": "getCloudSyncOptInStatus(IWearableCallbacks callbacks)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: getCloudSyncOptInStatus\");",
+      "implLine": 251
+    },
+    {
+      "name": "sendRemoteCommand",
+      "transactionId": 52,
+      "group": "Other",
+      "signature": "sendRemoteCommand(IWearableCallbacks callbacks, byte b)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: sendRemoteCommand: \" + b);",
+      "implLine": 256
+    },
+    {
+      "name": "putConnection",
+      "transactionId": 1,
+      "group": "deprecated Connection",
+      "signature": "putConnection(IWearableCallbacks callbacks, in ConnectionConfiguration config)",
+      "status": "stubbed",
+      "evidence": "Log.d(TAG, \"unimplemented Method: putConnection\");",
+      "implLine": 432
+    },
+    {
+      "name": "getConnection",
+      "transactionId": 2,
+      "group": "deprecated Connection",
+      "signature": "getConnection(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 438
+    },
+    {
+      "name": "enableConnection",
+      "transactionId": 3,
+      "group": "deprecated Connection",
+      "signature": "enableConnection(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 452
+    },
+    {
+      "name": "disableConnection",
+      "transactionId": 4,
+      "group": "deprecated Connection",
+      "signature": "disableConnection(IWearableCallbacks callbacks)",
+      "status": "implemented",
+      "evidence": null,
+      "implLine": 463
+    }
+  ],
+  "features": {
+    "declared": 33,
+    "backedCount": 0,
+    "items": [
+      {
+        "name": "app_client",
+        "version": 4,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "carrier_auth",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear3_oem_companion",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_await_data_sync_complete",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_backup_restore",
+        "version": 8,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_consent",
+        "version": 2,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_consent_recordoptin",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_consent_recordoptin_swaadl",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_consent_supervised",
+        "version": 2,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_get_phone_switching_feature_status",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_fast_pair_account_key_sync",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_fast_pair_get_account_keys",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_fast_pair_get_account_key_by_account",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_flush_batched_data",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_get_related_configs",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_get_node_id",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_logging_service",
+        "version": 2,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_retry_connection",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_set_cloud_sync_setting_by_node",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_first_party_consents",
+        "version": 2,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_update_config",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_update_connection_retry_strategy",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_update_delay_config",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wearable_services",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_cancel_migration",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_customizable_screens",
+        "version": 2,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_wifi_immediate_connect",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_get_node_active_network_metered",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_consents_per_watch",
+        "version": 3,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_material3_experience",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_offload_connection",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_get_local_capabilities",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      },
+      {
+        "name": "wear_notify_channel_flushed",
+        "version": 1,
+        "referencedBy": [],
+        "backed": false
+      }
+    ]
+  },
+  "transport": [
+    {
+      "key": "legacy-wear-proto",
+      "label": "Legacy Wear 1.x wire protocol (org.microg.wearable.proto)",
+      "hits": 38,
+      "files": [
+        "play-services-wearable/core/src/main/java/org/microg/gms/wearable/DataItemRecord.java",
+        "play-services-wearable/core/src/main/java/org/microg/gms/wearable/MessageHandler.java",
+        "play-services-wearable/core/src/main/java/org/microg/gms/wearable/WearableImpl.java"
+      ]
+    },
+    {
+      "key": "bluetooth-classic",
+      "label": "Bluetooth Classic / RFCOMM",
+      "hits": 0,
+      "files": []
+    },
+    {
+      "key": "bluetooth-le",
+      "label": "Bluetooth LE GATT (client or server)",
+      "hits": 0,
+      "files": []
+    },
+    {
+      "key": "nearby-connections",
+      "label": "Nearby Connections",
+      "hits": 0,
+      "files": []
+    },
+    {
+      "key": "cloud-relay",
+      "label": "Google cloud relay / GCM push for wearable",
+      "hits": 40,
+      "files": [
+        "play-services-wearable/core/src/main/java/org/microg/gms/wearable/WearableServiceImpl.java",
+        "play-services-wearable/src/main/java/com/google/android/gms/wearable/internal/GetCloudSyncOptInOutDoneResponse.java",
+        "play-services-wearable/src/main/java/com/google/android/gms/wearable/internal/GetCloudSyncOptInStatusResponse.java",
+        "play-services-wearable/src/main/java/com/google/android/gms/wearable/internal/GetCloudSyncSettingResponse.java",
+        "play-services-wearable/src/main/java/org/microg/gms/wearable/BaseWearableCallbacks.java"
+      ]
+    },
+    {
+      "key": "wifi-sync",
+      "label": "Wi-Fi sync",
+      "hits": 2,
+      "files": [
+        "play-services-wearable/core/src/main/java/org/microg/gms/wearable/WearableServiceImpl.java"
+      ]
+    },
+    {
+      "key": "ancs",
+      "label": "Apple Notification Center Service bridge",
+      "hits": 17,
+      "files": [
+        "play-services-wearable/core/src/main/java/org/microg/gms/wearable/WearableServiceImpl.java",
+        "play-services-wearable/src/main/java/com/google/android/gms/wearable/AncsNotification.java",
+        "play-services-wearable/src/main/java/com/google/android/gms/wearable/WearableListenerService.java",
+        "play-services-wearable/src/main/java/com/google/android/gms/wearable/internal/AncsNotificationParcelable.java"
+      ]
+    }
+  ],
+  "locByArea": {
+    "play-services-wearable/core/src/main/java": 2476,
+    "play-services-wearable/src/main/java/com": 4110,
+    "play-services-wearable/src/main/java/org": 1257
+  }
+}

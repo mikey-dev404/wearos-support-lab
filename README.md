@@ -78,6 +78,7 @@ whether advertised features are referenced anywhere else in the module.
 | [`docs/TEST-MATRIX.md`](docs/TEST-MATRIX.md) | Devices, ROMs, scenarios and the evidence bundle a patch needs |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | A phased plan with entry/exit criteria mapped onto the module's files |
 | [`reports/gap-report.md`](reports/gap-report.md) | Generated coverage matrix and stub inventory |
+| [`docs/FAQ.md`](docs/FAQ.md) | Scope, measurement method, reproduction, and what a first PR should be |
 
 ## Scope and honesty
 
